@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hackathon.s_shield.ReportActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Report"
+            android:id="@+id/reportTitle"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:id="@+id/imageView2"
+            android:layout_below="@+id/reportTitle"
+            android:layout_centerHorizontal="true"
+            android:src="@android:drawable/bottom_bar"
+            android:scaleType="fitXY"
+            android:layout_marginTop="5dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView2" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="What happened?"
+                    android:id="@+id/textView"
+                    android:textColor="#636363" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/reportET"
+                    android:background="#cbcbcb"
+                    android:hint="Write here everything"
+                    android:gravity="left"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Attach pictures"
+                    android:id="@+id/textView2"
+                    android:textColor="#636363"
+                    android:layout_marginTop="15dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:text="Attach"
+                        android:id="@+id/reportAttachBtn"
+                        android:background="@drawable/buttonbg"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:layout_marginTop="8dp"
+                        android:onClick="reportBtnClick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 attached picture(s)"
+                        android:id="@+id/attachedTV"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/identityRadioGrouo">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Report anonymously"
+                        android:id="@+id/radioButton"
+                        android:textSize="16sp"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I am.."
+                        android:id="@+id/radioButton2"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/personalInfoET"
+                    android:autoText="false"
+                    android:background="#cbcbcb"
+                    android:layout_marginTop="5dp"
+                    android:hint="Enter your info here"
+                    android:paddingLeft="15dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Done"
+                    android:id="@+id/reportSendBtn"
+                    android:background="@drawable/buttonbg"
+                    android:textColor="#fff"
+                    android:textSize="22sp"
+                    android:layout_marginTop="20dp"
+                    android:onClick="reportBtnClick"
+                    android:layout_marginBottom="10dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
